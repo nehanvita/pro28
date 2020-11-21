@@ -10,9 +10,13 @@ class Slingshot {
         World.add(world, this.sling);
         this.pointB=pointB
     }
-    fly(){
-        this.sling.bodyA=null 
-        }
+    attach(body){
+        this.sling.bodyA=body
+    }
+fly(){
+this.sling.bodyA=null 
+//null means bird is free from the constraint,bird is attached to nothing
+}
     display(){
         if(this.sling.bodyA){
         var pointA = this.sling.bodyA.position;

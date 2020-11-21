@@ -1,6 +1,6 @@
 class Mango{
 
-    constructor(x,y,width,height){
+    constructor(x,y,width,height,angle){
 
         var options = {
             isStatic:false,
@@ -21,9 +21,10 @@ class Mango{
     }
     display(){
         var mangopos =this.body.position;
-
+        var angle = this.body.angle;
         push()
         translate(mangopos.x,mangopos.y)
+        rotate(angle);
         imageMode(CENTER);
         fill(255,0,255);
         image(this.image,0,0,this.width,this.height);
